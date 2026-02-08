@@ -1,48 +1,343 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "maple",
+  "name": "Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6483F0",
+    "light": "#7590F2",
+    "dark": "#05050A"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/logo.svg",
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude"
+    ]
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Get started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "/documentation/getting-started/overview",
+              {
+                "group": "Quickstart",
+                "pages": [
+                  "/documentation/getting-started/quickstart/logging",
+                  "/documentation/getting-started/quickstart/tracing",
+                  "/documentation/getting-started/quickstart/gateway",
+                  "/documentation/getting-started/quickstart/prompt_management",
+                  "/documentation/getting-started/quickstart/evaluation"
+                ]
+              },
+              "/documentation/getting-started/observability_data_model"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Features",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              {
+                "group": "Observability",
+                "pages": [
+                  "/documentation/products/dashboard/metrics",
+                  "/documentation/products/dashboard/views",
+                  {
+                    "group": "Logs",
+                    "pages": [
+                      "/documentation/products/logs/quickstart",
+                      "/documentation/products/logs/configuration/pass_respan_parameters",
+                      "/documentation/products/logs/configuration/custom_properties",
+                      "/documentation/products/logs/log_variables",
+                      "/documentation/products/logs/log_tool_calls",
+                      "/documentation/products/logs/log_images",
+                      "/documentation/products/logs/log_thinking",
+                      "/documentation/products/logs/embedding_logging",
+                      "/documentation/products/logs/save_log_to_prompt",
+                      "/documentation/products/logs/configuration/threads",
+                      "/documentation/products/logs/export_logs",
+                      "/documentation/products/logs/configuration/group_logs",
+                      "/documentation/products/logs/custom_model",
+                      "/documentation/products/logs/sharing"
+                    ]
+                  },
+                  {
+                    "group": "Traces",
+                    "pages": [
+                      "/documentation/products/traces/quickstart",
+                      "/documentation/products/traces/decorators",
+                      "/documentation/products/traces/configuration/pass_respan_parameters",
+                      "/documentation/products/traces/configuration/group_traces",
+                      "/documentation/products/traces/configuration/customer_identifier",
+                      "/documentation/products/traces/override-span-input-output",
+                      "/documentation/products/traces/logs_to_trace"
+                    ]
+                  },
+                  {
+                    "group": "Users",
+                    "pages": [
+                      "/documentation/products/users/customer-identifier",
+                      "/documentation/products/users/user_rate_limit",
+                      "/documentation/products/users/user-budget"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Prompt management",
+                "pages": [
+                  "/documentation/products/prompt_management/quickstart",
+                  "/documentation/products/prompt_management/model_playground",
+                  {
+                    "group": "Create prompts",
+                    "pages": [
+                      "/documentation/products/prompt_management/creating_prompts/create_prompt",
+                      "/documentation/products/prompt_management/creating_prompts/json_schema",
+                      "/documentation/products/prompt_management/creating_prompts/streaming",
+                      "/documentation/products/prompt_management/creating_prompts/jinja_support",
+                      "/documentation/products/prompt_management/creating_prompts/manage_prompt_api"
+                    ]
+                  },
+                  "/documentation/products/prompt_management/management_collaboration/version_control",
+                  {
+                    "group": "Use prompt in code",
+                    "pages": [
+                      "/documentation/products/prompt_management/use_prompt_in_code/use_prompt_in_llms",
+                      "/documentation/products/prompt_management/use_prompt_in_code/prompt_logging"
+                    ]
+                  },
+                  "/documentation/products/prompt_management/management_collaboration/team_collaboration"
+                ]
+              },
+              {
+                "group": "Evals",
+                "pages": [
+                  {
+                    "group": "Evaluators",
+                    "pages": [
+                      "/documentation/products/evaluation/llm-evals/llm-evaluator",
+                      "/documentation/products/evaluation/llm-evals/run-evaluator-code",
+                      "/documentation/products/evaluation/llm-evals/run-evaluator-ui",
+                      "/documentation/products/evaluation/human-evals/human-evals-setup",
+                      "/documentation/products/evaluation/human-evals/human-annotation"
+                    ]
+                  },
+                  {
+                    "group": "Datasets",
+                    "pages": [
+                      "/documentation/products/dataset/via_api",
+                      "/documentation/products/dataset/via_ui"
+                    ]
+                  },
+                  {
+                    "group": "Testsets",
+                    "pages": [
+                      "/documentation/products/evaluation/experiments/testsets",
+                      "/documentation/products/evaluation/experiments/upload-testsets"
+                    ]
+                  },
+                  {
+                    "group": "Experiments",
+                    "pages": [
+                      "/documentation/products/evaluation/experiments/experiments",
+                      "/documentation/products/evaluation/experiments/experiments-images"
+                    ]
+                  },
+                  {
+                    "group": "Experiments V2 (Beta)",
+                    "pages": [
+                      "/documentation/products/experiments_v2/via_ui",
+                      "/documentation/products/experiments_v2/api-tutorial"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "LLM Gateway",
+                "pages": [
+                  "/documentation/getting-started/quickstart/gateway",
+                  "/documentation/products/gateway/configuration/models",
+                  "/documentation/products/gateway/traffic_management/load-balancing",
+                  "/documentation/products/gateway/traffic_management/retries",
+                  "/documentation/products/gateway/traffic_management/fallbacks",
+                  "/documentation/products/gateway/traffic_management/rate_limit",
+                  {
+                    "group": "Caches",
+                    "pages": [
+                      "/documentation/products/gateway/performance_optimization/caches",
+                      "/documentation/products/gateway/performance_optimization/prompt-caching"
+                    ]
+                  },
+                  "/documentation/products/gateway/advanced_features/function_calling",
+                  "/documentation/products/gateway/advanced_features/thinking",
+                  "/documentation/products/gateway/advanced_features/upload_pdf",
+                  "/documentation/products/gateway/advanced_features/upload_image",
+                  "/documentation/products/gateway/monitoring_analysis/disable_logging"
+                ]
+              },
+              {
+                "group": "Notifications",
+                "pages": [
+                  "/documentation/products/notifications/subscribe_alerts",
+                  "/documentation/products/notifications/webhooks"
+                ]
+              },
+              {
+                "group": "Automations (Beta)",
+                "pages": [
+                  "/documentation/products/automation/quickstart",
+                  "/documentation/products/automation/quickstart_online_eval"
+                ]
+              }
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Admin",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "/documentation/admin/respan_api_keys",
+              "/documentation/admin/llm_provider_keys",
+              {
+                "group": "Team management",
+                "pages": [
+                  "/documentation/admin/team_management/create_a_new_team"
+                ]
+              }
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Security",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "/documentation/security/trust_center",
+              "/documentation/security/socii",
+              "/documentation/security/hipaa",
+              "/documentation/security/gdpr",
+              "/documentation/security/architecture_review",
+              "/documentation/security/security-qa"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "/documentation/resources/mcp",
+              "/documentation/resources/what-is-llm-observability-and-monitoring",
+              "/documentation/resources/automatic-retries",
+              "/documentation/resources/streaming",
+              "/documentation/resources/error-handling",
+              "/documentation/resources/api-rate-limits"
+            ]
+          },
+          {
+            "group": "Help & Community",
+            "pages": [
+              "/documentation/support/support",
+              "/documentation/support/feedback",
+              "/documentation/support/status"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
+        "groups": [
+          {
+            "group": "Ecosystem",
+            "pages": [
+              "/integrations/overview"
+            ]
+          },
+          {
+            "group": "Tracing integration",
+            "pages": [
+              {
+                "group": "OpenAI Agents SDK",
+                "pages": [
+                  "/integrations/development-frameworks/tracing/openai-agents-sdk",
+                  "/integrations/development-frameworks/tracing/openai-agents-sdk-js"
+                ]
+              },
+              "/integrations/tracing/vercel-tracing",
+              "/integrations/development-frameworks/tracing/mastra",
+              "/integrations/development-frameworks/tracing/langgraph",
+              "/integrations/development-frameworks/tracing/langfuse",
+              "/integrations/development-frameworks/tracing/haystack",
+              "/integrations/development-frameworks/tracing/baml",
+              "/integrations/development-frameworks/tracing/instructor"
+            ]
+          },
+          {
+            "group": "Gateway integration",
+            "pages": [
+              {
+                "group": "OpenAI SDK",
+                "pages": [
+                  "/integrations/development-frameworks/llm_framework/openai/openai-sdk",
+                  "/integrations/development-frameworks/llm_framework/openai/openai-responses"
+                ]
+              },
+              "/integrations/development-frameworks/llm_framework/anthropic",
+              "/integrations/development-frameworks/llm_framework/langchain",
+              "/integrations/development-frameworks/llm_framework/litellm",
+              "/integrations/development-frameworks/llm_framework/haystack",
+              "/integrations/development-frameworks/llm_framework/vercel",
+              "/integrations/development-frameworks/llm_framework/llama-index",
+              "/integrations/development-frameworks/llm_framework/google_genai"
+            ]
+          },
+          {
+            "group": "LLM providers",
+            "pages": [
+              "/integrations/providers/openai",
+              "/integrations/providers/anthropic",
+              "/integrations/providers/openrouter",
+              "/integrations/providers/groq",
+              "/integrations/providers/fireworks",
+              "/integrations/providers/together",
+              "/integrations/providers/perplexity",
+              "/integrations/providers/azure",
+              "/integrations/providers/vertex",
+              "/integrations/providers/gemini",
+              "/integrations/providers/bedrock",
+              "/integrations/providers/nebius",
+              "/integrations/providers/novita",
+              "/integrations/providers/xAI",
+              "/integrations/providers/ai21labs",
+              "/integrations/providers/baseten",
+              "/integrations/providers/cohere",
+              "/integrations/providers/deepseek",
+              "/integrations/providers/inference",
+              "/integrations/providers/mistral",
+              "/integrations/providers/moonshot",
+              "/integrations/providers/nextbit",
+              "/integrations/providers/parasail",
+              "/integrations/providers/replicate",
+              "/integrations/providers/reducto"
+            ]
+          },
+          {
+            "group": "Dev Tools",
+            "pages": [
+              "/integrations/dev-tools/cursor",
+              "/integrations/dev-tools/claude-code",
+              "/integrations/dev-tools/linkup"
+            ]
+          },
+          {
+            "group": "Memory",
+            "pages": [
+              "/integrations/development-frameworks/mem0",
+              "/integrations/others/cognee"
+            ]
+          },
+          {
+            "group": "Others",
+            "pages": [
+              "/integrations/providers/assemblyai",
+              "/integrations/development-frameworks/baml",
+              "/integrations/analytics/posthog"
             ]
           }
         ]
@@ -51,72 +346,547 @@
         "tab": "API reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Observe",
             "pages": [
-              "api-reference/introduction"
+              {
+                "group": "Logs",
+                "pages": [
+                  "/apis/observe/logs/request-logging-endpoint",
+                  "/apis/observe/logs/logs-list-endpoint",
+                  "/apis/observe/logs/logs-summary-endpoint",
+                  "/apis/observe/logs/get-log-endpoint",
+                  "/apis/observe/logs/update-single-log-endpoint",
+                  "/apis/observe/logs/logs-update-endpoint",
+                  "/apis/observe/logs/delete-log-endpoint",
+                  "/apis/observe/logs/ingest"
+                ]
+              },
+              {
+                "group": "Traces",
+                "pages": [
+                  "/apis/observe/traces/list",
+                  "/apis/observe/traces/get",
+                  "/apis/observe/traces/summary",
+                  "/apis/observe/traces/traces-ingest-from-logs"
+                ]
+              },
+              {
+                "group": "Threads",
+                "pages": [
+                  "/apis/observe/threads/thread-list-endpoint"
+                ]
+              },
+              {
+                "group": "Users",
+                "pages": [
+                  "/apis/observe/users/user-creation-endpoint",
+                  "/apis/observe/users/users-data-endpoint",
+                  "/apis/observe/users/user-detail-endpoint",
+                  "/apis/observe/users/user-update-endpoint",
+                  "/apis/observe/users/user-delete-endpoint"
+                ]
+              }
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Develop",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              {
+                "group": "Gateway",
+                "pages": [
+                  "/apis/develop/gateway/chat-completions"
+                ]
+              },
+              {
+                "group": "OpenAI Batch",
+                "pages": [
+                  {
+                    "group": "Files",
+                    "pages": [
+                      "/apis/develop/openai-batch/files/upload",
+                      "/apis/develop/openai-batch/files/list",
+                      "/apis/develop/openai-batch/files/get",
+                      "/apis/develop/openai-batch/files/delete",
+                      "/apis/develop/openai-batch/files/content"
+                    ]
+                  },
+                  {
+                    "group": "Batches",
+                    "pages": [
+                      "/apis/develop/openai-batch/batches/create",
+                      "/apis/develop/openai-batch/batches/list",
+                      "/apis/develop/openai-batch/batches/get",
+                      "/apis/develop/openai-batch/batches/cancel"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Multimodal",
+                "pages": [
+                  "/apis/develop/multimodal/embeddings",
+                  "/apis/develop/multimodal/speech-to-text",
+                  "/apis/develop/multimodal/text-to-speech",
+                  "/apis/develop/multimodal/assemblyai"
+                ]
+              },
+              {
+                "group": "Prompts",
+                "pages": [
+                  "/apis/develop/prompts/create-prompts",
+                  "/apis/develop/prompts/get-prompts",
+                  "/apis/develop/prompts/update-prompt",
+                  "/apis/develop/prompts/delete-prompt",
+                  {
+                    "group": "Prompt Versions",
+                    "pages": [
+                      "/apis/develop/prompts/create-prompt-version",
+                      "/apis/develop/prompts/get-prompt-versions",
+                      "/apis/develop/prompts/update-prompt-version",
+                      "/apis/develop/prompts/delete-prompt-version"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Testsets",
+                "pages": [
+                  "/apis/develop/testsets/create",
+                  "/apis/develop/testsets/list",
+                  "/apis/develop/testsets/get",
+                  "/apis/develop/testsets/update",
+                  "/apis/develop/testsets/delete",
+                  {
+                    "group": "Testset Rows",
+                    "pages": [
+                      "/apis/develop/testsets/rows-create",
+                      "/apis/develop/testsets/rows-list",
+                      "/apis/develop/testsets/rows-update",
+                      "/apis/develop/testsets/rows-delete"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Experiments",
+                "pages": [
+                  "/apis/develop/experiments-v2/create",
+                  "/apis/develop/experiments-v2/list",
+                  "/apis/develop/experiments-v2/search",
+                  "/apis/develop/experiments-v2/get",
+                  "/apis/develop/experiments-v2/delete",
+                  {
+                    "group": "Experiment logs",
+                    "pages": [
+                      "/apis/develop/experiments-v2/logs-list",
+                      "/apis/develop/experiments-v2/logs-search",
+                      "/apis/develop/experiments-v2/logs-get",
+                      "/apis/develop/experiments-v2/logs-update",
+                      "/apis/develop/experiments-v2/logs-summary",
+                      "/apis/develop/experiments-v2/logs-export"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Evals",
+            "pages": [
+              {
+                "group": "Evaluators",
+                "pages": [
+                  "/apis/evaluate/evaluators/create",
+                  "/apis/evaluate/evaluators/list",
+                  "/apis/evaluate/evaluators/get",
+                  "/apis/evaluate/evaluators/update",
+                  "/apis/evaluate/evaluators/delete",
+                  "/apis/evaluate/evaluators/run"
+                ]
+              },
+              {
+                "group": "Datasets",
+                "pages": [
+                  "/apis/evaluate/datasets/get",
+                  "/apis/evaluate/datasets/create",
+                  "/apis/evaluate/datasets/list",
+                  "/apis/evaluate/datasets/patch",
+                  "/apis/evaluate/datasets/delete",
+                  {
+                    "group": "Dataset Logs",
+                    "pages": [
+                      "/apis/evaluate/datasets/logs-list",
+                      "/apis/evaluate/datasets/logs-list-post",
+                      "/apis/evaluate/datasets/logs-create",
+                      "/apis/evaluate/datasets/logs-get",
+                      "/apis/evaluate/datasets/logs-put",
+                      "/apis/evaluate/datasets/logs-patch",
+                      "/apis/evaluate/datasets/logs-delete",
+                      "/apis/evaluate/datasets/logs-remove",
+                      "/apis/evaluate/datasets/logs-add"
+                    ]
+                  },
+                  {
+                    "group": "Dataset Evaluations",
+                    "pages": [
+                      "/apis/evaluate/datasets/eval-reports-create",
+                      "/apis/evaluate/datasets/eval-reports-list"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Scores",
+                "pages": [
+                  "/apis/evaluate/scores/list",
+                  "/apis/evaluate/scores/create",
+                  "/apis/evaluate/scores/get",
+                  "/apis/evaluate/scores/update",
+                  "/apis/evaluate/scores/delete"
+                ]
+              },
+              {
+                "group": "Log Scores",
+                "pages": [
+                  "/apis/evaluate/log-scores/list",
+                  "/apis/evaluate/log-scores/create",
+                  "/apis/evaluate/log-scores/get",
+                  "/apis/evaluate/log-scores/update",
+                  "/apis/evaluate/log-scores/delete"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Manage",
+            "pages": [
+              {
+                "group": "Models",
+                "pages": [
+                  "/apis/manage/models/models-endpoint",
+                  {
+                    "group": "Custom Models",
+                    "pages": [
+                      "/apis/manage/models/custom-models/list",
+                      "/apis/manage/models/custom-models/create",
+                      "/apis/manage/models/custom-models/get",
+                      "/apis/manage/models/custom-models/update",
+                      "/apis/manage/models/custom-models/delete"
+                    ]
+                  },
+                  {
+                    "group": "Custom Providers",
+                    "pages": [
+                      "/apis/manage/models/custom-providers/list",
+                      "/apis/manage/models/custom-providers/create",
+                      "/apis/manage/models/custom-providers/get",
+                      "/apis/manage/models/custom-providers/update",
+                      "/apis/manage/models/custom-providers/delete"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Temporary API Keys",
+                "pages": [
+                  "/apis/manage/temporary-api-keys/list-temporary-keys",
+                  "/apis/manage/temporary-api-keys/create-temporary-key",
+                  "/apis/manage/temporary-api-keys/retrieve-temporary-key",
+                  "/apis/manage/temporary-api-keys/update-temporary-key",
+                  "/apis/manage/temporary-api-keys/delete-temporary-key"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Automation",
+            "pages": [
+              {
+                "group": "Conditions",
+                "pages": [
+                  "/apis/automation/conditions/list",
+                  "/apis/automation/conditions/create"
+                ]
+              },
+              {
+                "group": "Automations",
+                "pages": [
+                  "/apis/automation/automations/create",
+                  "/apis/automation/automations/patch"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "/apis/reference/filters_api_reference"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "SDKs",
+        "groups": [
+          {
+            "group": "Python Tracing SDK",
+            "pages": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "/sdks/python-tracing/quickstart",
+                  "/sdks/python-tracing/examples"
+                ]
+              },
+              {
+                "group": "Decorators",
+                "pages": [
+                  "/sdks/python-tracing/decorators/workflow",
+                  "/sdks/python-tracing/decorators/task",
+                  "/sdks/python-tracing/decorators/agent",
+                  "/sdks/python-tracing/decorators/tool"
+                ]
+              },
+              {
+                "group": "Client API",
+                "pages": [
+                  "/sdks/python-tracing/main/initialize",
+                  "/sdks/python-tracing/client/get-client",
+                  "/sdks/python-tracing/client/get-current-trace-id",
+                  "/sdks/python-tracing/client/get-current-span-id",
+                  "/sdks/python-tracing/client/update-current-span",
+                  "/sdks/python-tracing/client/add-event",
+                  "/sdks/python-tracing/client/record-exception",
+                  "/sdks/python-tracing/client/get-context-value",
+                  "/sdks/python-tracing/client/set-context-value",
+                  "/sdks/python-tracing/client/is-recording",
+                  "/sdks/python-tracing/client/get-tracer",
+                  "/sdks/python-tracing/client/flush",
+                  "/sdks/python-tracing/client/get-span-buffer",
+                  "/sdks/python-tracing/client/export-spans"
+                ]
+              },
+              {
+                "group": "Contexts",
+                "pages": [
+                  "/sdks/python-tracing/contexts/respan-span-attributes"
+                ]
+              },
+              {
+                "group": "Instrumentation",
+                "pages": [
+                  "/sdks/python-tracing/instrumentation/overview"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "TypeScript Tracing SDK",
+            "pages": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "/sdks/typescript-tracing/quickstart",
+                  "/sdks/typescript-tracing/examples"
+                ]
+              },
+              {
+                "group": "Methods",
+                "pages": [
+                  "/sdks/typescript-tracing/methods/with-workflow",
+                  "/sdks/typescript-tracing/methods/with-task",
+                  "/sdks/typescript-tracing/methods/with-agent",
+                  "/sdks/typescript-tracing/methods/with-tool"
+                ]
+              },
+              {
+                "group": "Client API",
+                "pages": [
+                  "/sdks/typescript-tracing/client/initialize",
+                  "/sdks/typescript-tracing/client/get-client",
+                  "/sdks/typescript-tracing/client/get-current-trace-id",
+                  "/sdks/typescript-tracing/client/get-current-span-id",
+                  "/sdks/typescript-tracing/client/update-current-span",
+                  "/sdks/typescript-tracing/client/add-span-event",
+                  "/sdks/typescript-tracing/client/record-span-exception",
+                  "/sdks/typescript-tracing/client/get-context-value",
+                  "/sdks/typescript-tracing/client/set-context-value",
+                  "/sdks/typescript-tracing/client/is-recording",
+                  "/sdks/typescript-tracing/client/get-tracer",
+                  "/sdks/typescript-tracing/client/flush",
+                  "/sdks/typescript-tracing/client/shutdown"
+                ]
+              },
+              {
+                "group": "Configuration",
+                "pages": [
+                  "/sdks/typescript-tracing/configuration/respan-params"
+                ]
+              },
+              {
+                "group": "Instrumentation",
+                "pages": [
+                  "/sdks/typescript-tracing/instrumentation/overview"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Respan SDK",
+            "pages": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "/sdks/python/quickstart",
+                  "/sdks/python/examples"
+                ]
+              },
+              {
+                "group": "Logs",
+                "pages": [
+                  "/sdks/python/logs/overview",
+                  "/sdks/python/logs/create",
+                  "/sdks/python/logs/list"
+                ]
+              },
+              {
+                "group": "Prompts",
+                "pages": [
+                  "/sdks/python/prompts/overview",
+                  "/sdks/python/prompts/create",
+                  "/sdks/python/prompts/list",
+                  "/sdks/python/prompts/get",
+                  "/sdks/python/prompts/update",
+                  "/sdks/python/prompts/delete",
+                  "/sdks/python/prompts/create-version",
+                  "/sdks/python/prompts/list-versions",
+                  "/sdks/python/prompts/get-version",
+                  "/sdks/python/prompts/update-version"
+                ]
+              },
+              {
+                "group": "Experiments",
+                "pages": [
+                  "/sdks/python/experiments/overview",
+                  "/sdks/python/experiments/create",
+                  "/sdks/python/experiments/list",
+                  "/sdks/python/experiments/get",
+                  "/sdks/python/experiments/update",
+                  "/sdks/python/experiments/delete",
+                  "/sdks/python/experiments/add-rows",
+                  "/sdks/python/experiments/remove-rows",
+                  "/sdks/python/experiments/update-rows",
+                  "/sdks/python/experiments/add-columns",
+                  "/sdks/python/experiments/remove-columns",
+                  "/sdks/python/experiments/update-columns",
+                  "/sdks/python/experiments/run-experiment",
+                  "/sdks/python/experiments/run-experiment-evals"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": "Changelog",
+            "icon": "calendar",
+            "pages": [
+              "changelog/index"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
+  },
+  "styling": {
+    "codeblocks": "system"
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://www.respan.ai"
+  },
+  "api": {
+    "playground": {
+      "display": "interactive"
+    },
+    "mdx": {
+      "server": "https://api.respan.ai",
+      "auth": {
+        "method": "bearer",
+        "name": "Authorization"
+      }
+    }
+  },
+  "background": {
+    "color": {
+      "light": "#ffffff",
+      "dark": "#05050A"
+    }
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Discord",
+        "href": "https://discord.com/invite/KEanfAafQQ"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "platform",
+      "href": "https://platform.respan.ai/"
     }
   },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+  "search": {
+    "prompt": "Search..."
+  },
+  "seo": {
+    "metatags": {
+      "og:site_name": "Respan | LLM monitoring platform",
+      "og:image": "/logo.svg",
+      "twitter:site": "@respan"
+    },
+    "indexing": "all"
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://www.linkedin.com/company/respan/",
+      "github": "https://github.com/respan",
+      "discord": "https://discord.com/invite/KEanfAafQQ"
     }
-  }
+  },
+  "integrations": {
+    "posthog": {
+      "apiKey": "phc_rL8MrmFrie28wgxtDurKt9t1bwCzChaJQ7WYaj1F1gH"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Inter"
+    },
+    "body": {
+      "family": "Inter"
+    }
+  },
+  "redirects": [
+    {
+      "source": "/integrations/development-frameworks/openai-agent",
+      "destination": "/integrations/development-frameworks/tracing/openai-agents-sdk"
+    },
+    {
+      "source": "/integrations/development-frameworks/openai-agents-sdk-js",
+      "destination": "/integrations/development-frameworks/tracing/openai-agents-sdk-js"
+    },
+    {
+      "source": "/integrations/development-frameworks/openai-sdk",
+      "destination": "/integrations/development-frameworks/llm_framework/openai/openai-sdk"
+    },
+    {
+      "source": "/documentation/getting-started/llm-inference",
+      "destination": "/documentation/getting-started/overview"
+    }
+  ]
 }
