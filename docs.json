@@ -806,7 +806,10 @@
   },
   "integrations": {
     "posthog": {
-      "apiKey": "phc_rL8MrmFrie28wgxtDurKt9t1bwCzChaJQ7WYaj1F1gH"
+      "apiKey": "phc_BsQ3F5LZOPbBxvxGCExfvpMR5pIdrPMfrVT2e1Rohwi"
+    },
+    "ga4": {
+      "measurementId": "G-PGHZ09XFBH"
     }
   },
   "fonts": {
